@@ -18,7 +18,7 @@ const crearServicio = async (req, res) => {
     if (codigo === null) {
         errores.push({ mensaje: 'El campo codigo está vacío' });
     }
-    if (geocerca === null) {
+    if (geocerca === undefined || geocerca.length <= 0) {
         errores.push({ mensaje: 'El campo geocerca está vacío' });
     }
 

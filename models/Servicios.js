@@ -21,7 +21,7 @@ export const Servicio = db.define('servicios', {
         type: Sequelize.INTEGER
     },
     geocerca: {
-        type: Sequelize.BOOLEAN
+        type: Sequelize.JSON
     }
 
 })
