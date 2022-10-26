@@ -6,13 +6,6 @@ import serviciosRoutes from './routes/serviciosRoutes.js';
 const app = express();
 const PORT = 4000;
 
-
-// Leer query params
-app.use(express.urlencoded({ extended: true }))
-
-conectarDB();
-
-
 const dominiosPermitidos = [process.env.FRONTEND_URL]
 
 const corsOptions = {
@@ -25,9 +18,17 @@ const corsOptions = {
         } 
     }
 }
+app.use(cors(corsOptions))
+
+
+// Leer query params
+app.use(express.urlencoded({ extended: true }))
+
+conectarDB();
+
 
 app.use(express.json());
-// app.use(cors(corsOptions))
+
 // Utilizar la ruta /api/...
 app.use('/api', serviciosRoutes);
 
