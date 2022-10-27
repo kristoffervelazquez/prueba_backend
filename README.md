@@ -1,3 +1,8 @@
 # prueba_backend
 ## Agregar archivo .env
-VITE_BACKEND_URL = http://localhost:4000/api
+BD_USER=user
+BD_NOMBRE=bdname 
+BD_PASS=clave
+BD_HOST=localhost
+BD_PORT=3306
+FRONTEND_URL=http://localhost:3000
